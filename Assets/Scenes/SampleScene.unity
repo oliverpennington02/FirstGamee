@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165846125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.293, z: 0}
+  m_LocalPosition: {x: 0.021, y: -0.311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217,7 +217,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1602831923}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6
+    OrthographicSize: 7.02
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -601,7 +601,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019668877, y: -0.21810994}
+  m_Offset: {x: 0.019668877, y: -0.24262226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -612,7 +612,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2796426, y: 0.12569094}
+  m_Size: {x: 0.2796426, y: 0.07666628}
   m_EdgeRadius: 0
 --- !u!114 &1602831921
 MonoBehaviour:
@@ -629,9 +629,11 @@ MonoBehaviour:
   moveSpeed: 3
   referenceObject: {fileID: 165846126}
   sortingOrderMultiplier: -100
-  prefabTag: MyPrefab
-  prefabTag2: MyPrefab2
-  prefabTag3: MyPrefab3
+  interactDistance: 2
+  interactionOffset: 1
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!212 &1602831922
 SpriteRenderer:
   m_ObjectHideFlags: 0
