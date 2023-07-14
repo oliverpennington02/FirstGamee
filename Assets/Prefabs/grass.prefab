@@ -71,15 +71,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.003482423, g: 0.7169812, b: 0, a: 1}
+  m_SortingLayerID: -1896024431
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 7d3f627d453919c41810f2c5671439fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +98,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPrefabs:
-  - prefab: {fileID: 8888834901535549851, guid: 10fd345f292bace4480b4e88522ea620, type: 3}
+  - prefab: {fileID: 7672456621082117098, guid: 10e51846a2d355140a293ce098fe3cd7, type: 3}
     spawnChance: 0.11
+    maxOffset: 0.4
   - prefab: {fileID: 5605932031933484006, guid: 0ebbadc53f04a52468709a546fe10252, type: 3}
-    spawnChance: 0.01
+    spawnChance: 0.005
+    maxOffset: 0.3
+  - prefab: {fileID: 1915410596372248060, guid: 6272591285328bf42a4e0bfebb88b78d, type: 3}
+    spawnChance: 0.1
+    maxOffset: 0.2
+  - prefab: {fileID: 3166693048063592098, guid: fd423fc78341fe240900361508ef3ae7, type: 3}
+    spawnChance: 0.1
+    maxOffset: 0.2
+  - prefab: {fileID: 3912922400690188885, guid: 5cc9eb3904e0fa04eb7da2f29e34e6de, type: 3}
+    spawnChance: 0.1
+    maxOffset: 0.2
+  - prefab: {fileID: 1145105280787672675, guid: de9fec50498825e4e88220a88b3e49d1, type: 3}
+    spawnChance: 0.1
+    maxOffset: 0.2
+  sortingOrderMultiplier: -100

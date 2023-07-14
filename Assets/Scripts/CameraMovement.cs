@@ -7,8 +7,10 @@ public class CameraMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
-
     private SpriteRenderer spriteRenderer;
+
+    public Transform referenceObject;
+    public float sortingOrderMultiplier = 100f;
 
     private void Start()
     {
@@ -23,6 +25,11 @@ public class CameraMovement : MonoBehaviour
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         rb.velocity = movement * moveSpeed;
+
+        if (referenceObject != null)
+        {
+            spriteRenderer.sortingOrder = Mathf.RoundToInt(referenceObject.position.y * sortingOrderMultiplier);
+        }
     }
 
     // Tag of the specific prefab

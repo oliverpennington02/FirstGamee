@@ -30,9 +30,9 @@ public class WorldGenerator : MonoBehaviour
 
         NormalizeSpawnPercentages();
 
-        for (int x = 0; x < worldWidth; x++)
+        for (int y = worldHeight - 1; y >= 0; y--)
         {
-            for (int y = 0; y < worldHeight; y++)
+            for (int x = 0; x < worldWidth; x++)
             {
                 float noiseValue = Mathf.PerlinNoise((float)x * noiseScale, (float)y * noiseScale);
 
