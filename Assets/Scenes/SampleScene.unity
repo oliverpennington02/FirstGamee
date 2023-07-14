@@ -445,13 +445,15 @@ MonoBehaviour:
   noiseScale: 0.1
   tilePrefabs:
   - prefab: {fileID: 7514035647261505715, guid: c1738380967688843acaa59b0dc1e509, type: 3}
-    spawnPercentage: 20
+    spawnPercentage: 15
   - prefab: {fileID: 7682676268182628283, guid: 6141ef97ba19f4849bc77eb7e7dc557f, type: 3}
     spawnPercentage: 10
   - prefab: {fileID: 5035507306633766311, guid: af41f787fe967b44f96d3f0ea5a3cef1, type: 3}
-    spawnPercentage: 35
+    spawnPercentage: 15
   - prefab: {fileID: 9111041154237122868, guid: b237c270fa3bbcf488fd31c35fe87f9f, type: 3}
-    spawnPercentage: 40
+    spawnPercentage: 30
+  - prefab: {fileID: 7520156270590727252, guid: f5a401d6f776af44d8767eef06d0dc3b, type: 3}
+    spawnPercentage: 30
 --- !u!4 &1403248077
 Transform:
   m_ObjectHideFlags: 0
