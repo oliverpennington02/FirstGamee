@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691814216754506482}
   - component: {fileID: 6792000626975220325}
+  - component: {fileID: 6266143681302628736}
   m_Layer: 0
   m_Name: sand
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6266143681302628736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682676268182628283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd479f69879d409aed6aeda600ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefabs: []

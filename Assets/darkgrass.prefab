@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6643962648791079120}
   - component: {fileID: 2531672052540418577}
+  - component: {fileID: 4064019678896915799}
   m_Layer: 0
   m_Name: darkgrass
   m_TagString: Untagged
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4064019678896915799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111041154237122868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd479f69879d409aed6aeda600ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefabs:
+  - prefab: {fileID: 8888834901535549851, guid: 10fd345f292bace4480b4e88522ea620, type: 3}
+    spawnChance: 0.5
+  - prefab: {fileID: 5605932031933484006, guid: 0ebbadc53f04a52468709a546fe10252, type: 3}
+    spawnChance: 0.08
