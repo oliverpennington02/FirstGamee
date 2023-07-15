@@ -20,6 +20,8 @@ public class CameraMovement : MonoBehaviour
     public float interactionOffset = 1f; // Offset in front of the player
     public LayerMask interactableLayer;
 
+    public GameObject raycastOrigin;
+
     private void Start()
     {
         //retrieve components
@@ -74,24 +76,24 @@ public class CameraMovement : MonoBehaviour
     }
 
     private void Interact()
+{
+    Debug.Log("Interact is played");
+    // Calculate the position in front of the player
+    Vector3 interactionPosition = raycastOrigin.transform.position + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f).normalized * interactionOffset;
+
+    RaycastHit2D hit = Physics2D.Raycast(interactionPosition, lastMovementDirection, interactDistance, interactableLayer);
+
+    Debug.DrawLine(interactionPosition, interactionPosition + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f) * interactDistance, Color.red, 1f);
+
+    if (hit.collider != null)
     {
-        Debug.Log("Interact is played");
-        // Calculate the position in front of the player
-        Vector3 interactionPosition = transform.position + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f).normalized * interactionOffset;
-
-        RaycastHit2D hit = Physics2D.Raycast(interactionPosition, lastMovementDirection, interactDistance, interactableLayer);
-
-        Debug.DrawLine(interactionPosition, interactionPosition + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f) * interactDistance, Color.red, 1f);
-
-        if (hit.collider != null)
+        Debug.Log("Collider Hit");
+        InteractablePrefab interactable = hit.collider.GetComponent<InteractablePrefab>();
+        if (interactable != null)
         {
-            Debug.Log("Collider Hit");
-            InteractablePrefab interactable = hit.collider.GetComponent<InteractablePrefab>();
-            if (interactable != null)
-            {
-                interactable.Interact();
-                // Optionally, you can pass additional values by calling interactable.Interact(5) or any other desired value
-            }
+            interactable.Interact();
+            // Optionally, you can pass additional values by calling interactable.Interact(5) or any other desired value
         }
     }
+}
 }

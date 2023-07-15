@@ -17,7 +17,6 @@ public class InteractablePrefab : MonoBehaviour
             // Health reached zero, destroy the prefab and add to the reward value
             Destroy(gameObject);
             // Add to the reward value here (e.g., increase the player's score)
-            Debug.Log("Prefab destroyed! Reward value: " + rewardValue);
         }
         else
         {
