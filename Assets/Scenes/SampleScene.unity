@@ -470,11 +470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395268039c042b942abec10f997be5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 3
-  columns: 3
-  spacing: 2
-  inventoryPanel: {fileID: 1797332491}
-  inventorySlotPrefab: {fileID: 1069766585190367036, guid: 77fef038767ebda44b77050c6feafd90, type: 3}
 --- !u!4 &998828768
 Transform:
   m_ObjectHideFlags: 0
@@ -690,8 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d724b0d101c8094684dbca0dd267340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldWidth: 200
-  worldHeight: 200
+  worldWidth: 65
+  worldHeight: 65
   seed: 349587
   noiseScale: 0.07
   tilePrefabs:
@@ -948,7 +943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -303.99994, y: 67}
+  m_AnchoredPosition: {x: -303.9999, y: 67}
   m_SizeDelta: {x: -660, y: -179.0837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797332492
