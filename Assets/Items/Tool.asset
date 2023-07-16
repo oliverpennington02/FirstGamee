@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dad23eab624ac1648b775ca043544014, type: 3}
-  m_Name: Wood Chunk
+  m_Name: Tool
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  type: 0
+  type: 1
   actionType: 0
   range: {x: 5, y: 4}
-  stackable: 1
-  image: {fileID: 21300000, guid: e318bb86738e4444395e34f77bef0382, type: 3}
+  stackable: 0
+  image: {fileID: 21300000, guid: dfd8b121414a26c48bbe4a9db949fdbc, type: 3}

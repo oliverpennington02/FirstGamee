@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [HideInInspector] public Item item;
-    
+    [HideInInspector] public int count = 1;
     [Header("UI")]
     public Image image;
+    public TextMeshProUGUI countText;
 
     public Transform initialParent;
     public Vector3 initialPosition;
@@ -19,11 +21,20 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         item = newItem;
         image.sprite = newItem.image;
+        RefreshCount();
+    }
+
+    public void RefreshCount()
+    {
+        countText.text = count.ToString();
+        bool textActive = count > 1;
+        countText.gameObject.SetActive(textActive);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         image.raycastTarget = false;
+        countText.raycastTarget = false;
         initialParent = transform.parent;
         initialPosition = transform.position;
 
@@ -45,6 +56,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
 {
     image.raycastTarget = true;
+    countText.raycastTarget = true;
     
     // Check if the pointer is hovering over any valid inventory slot
     InventorySlot inventorySlot = eventData.pointerEnter?.GetComponent<InventorySlot>();
