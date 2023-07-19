@@ -25,6 +25,7 @@ public class CameraMovement : MonoBehaviour
     public bool canPlace;
     public InventoryItem inventoryItem;
     public InventoryManager inventoryManager;
+    public InteractablePrefab interactablePrefab;
     private bool isInteracting = false;
 
     private void Start()
@@ -40,6 +41,10 @@ public class CameraMovement : MonoBehaviour
         {
             isInteracting = true; // Set the flag to indicate that the interaction button is pressed
             Interact(); // Call the Interact function on the first frame when the button is pressed
+        }
+        if (Input.GetMouseButtonDown(0)) // Change "Interact" to the name of your input button for interaction (e.g., "Space")
+        {
+            Hit(); // Call the Interact function on the first frame when the button is pressed
         }
     }
 
@@ -64,7 +69,27 @@ public class CameraMovement : MonoBehaviour
             lastMovementDirection = movementDirection;
         }
     }
+    public void Hit()
+{
+    Vector3 interactionPosition = raycastOrigin.transform.position + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f).normalized * interactionOffset;
+    RaycastHit2D hit = Physics2D.Raycast(interactionPosition, lastMovementDirection, interactDistance, interactableLayer);
 
+    Debug.DrawLine(interactionPosition, interactionPosition + new Vector3(lastMovementDirection.x, lastMovementDirection.y, 0f) * interactDistance, Color.red, 1f);
+
+    if (hit.collider != null)
+    {
+        Debug.Log("Collider Hit");
+        InteractablePrefab interactable = hit.collider.GetComponent<InteractablePrefab>();
+        if (interactable != null)
+        {
+            interactable.Interact();
+        }
+    }
+    else
+    {
+        Debug.Log("Didnt Hit an interactable object.");
+    }
+}
     public void Interact()
 {
     if ( isInteracting)

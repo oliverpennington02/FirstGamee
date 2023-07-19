@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefabs:
   - prefab: {fileID: 7672456621082117098, guid: 10e51846a2d355140a293ce098fe3cd7, type: 3}
-    spawnChance: 0.5
+    spawnChance: 0.303
     maxOffset: 0.1
   - prefab: {fileID: 5605932031933484006, guid: 0ebbadc53f04a52468709a546fe10252, type: 3}
     spawnChance: 0.01

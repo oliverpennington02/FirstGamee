@@ -569,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499941484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.021, y: -0.241, z: 0}
+  m_LocalPosition: {x: 0.007, y: -0.156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -639,7 +639,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.14
+  orthographic size: 2.81
   m_Depth: -0.07
   m_CullingMask:
     serializedVersion: 2
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1602831923}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 2.14
+    OrthographicSize: 2.81
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -2830,18 +2830,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019668877, y: -0.24262226}
+  m_Offset: {x: -0.00067681074, y: -0.33809072}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2796426, y: 0.07666628}
+  m_Size: {x: 0.55822265, y: 0.267603}
   m_EdgeRadius: 0
 --- !u!114 &1602831921
 MonoBehaviour:
@@ -2858,8 +2858,8 @@ MonoBehaviour:
   moveSpeed: 3
   referenceObject: {fileID: 165846126}
   sortingOrderMultiplier: -100
-  interactDistance: 0.05
-  interactionOffset: 1
+  interactDistance: 1
+  interactionOffset: 0
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2869,6 +2869,7 @@ MonoBehaviour:
   canPlace: 0
   inventoryItem: {fileID: 2339811213854952824, guid: cb0e86a44bbea3d419f54b5c0e2d544b, type: 3}
   inventoryManager: {fileID: 808255617}
+  interactablePrefab: {fileID: 2225193008139588242, guid: 10e51846a2d355140a293ce098fe3cd7, type: 3}
 --- !u!212 &1602831922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2910,12 +2911,12 @@ SpriteRenderer:
   m_SortingLayerID: 424313737
   m_SortingLayer: 3
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 81d5621607268aa4a92c5036326bd8f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcadb244cac9eb141ac49da31a185e80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
